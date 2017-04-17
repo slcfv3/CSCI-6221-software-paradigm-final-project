@@ -16,8 +16,8 @@ public class SnakeView implements Observer {
     Canvas paintCanvas;
     JLabel labelScore;
 
-    public static final int canvasWidth = 200;
-    public static final int canvasHeight = 300;
+    public static final int canvasWidth = 400;
+    public static final int canvasHeight = 600;
 
     public static final int nodeWidth = 10;
     public static final int nodeHeight = 10;
@@ -63,11 +63,11 @@ public class SnakeView implements Observer {
         Graphics g = paintCanvas.getGraphics();
 
         //draw background
-        g.setColor(Color.WHITE);
+        g.setColor(Color.yellow);
         g.fillRect(0, 0, canvasWidth, canvasHeight);
 
         // draw the snake
-        g.setColor(Color.BLACK);
+        g.setColor(Color.blue);
         LinkedList na = model.nodeArray;
         Iterator it = na.iterator();
         while (it.hasNext()) {
@@ -76,7 +76,7 @@ public class SnakeView implements Observer {
         }
 
         // draw the food
-        g.setColor(Color.RED);
+        g.setColor(Color.green);
         Node n = model.food;
         drawNode(g, n);
 

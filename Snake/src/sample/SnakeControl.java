@@ -27,12 +27,12 @@ public class SnakeControl  implements KeyListener{
                 case KeyEvent.VK_RIGHT:
                     model.changeDirection(SnakeModel.RIGHT);
                     break;
-                case KeyEvent.VK_ADD:
-                case KeyEvent.VK_PAGE_UP:
+              
+                case KeyEvent.VK_W:
                     model.speedUp();
                     break;
                 case KeyEvent.VK_SUBTRACT:
-                case KeyEvent.VK_PAGE_DOWN:
+                case KeyEvent.VK_S:
                     model.speedDown();
                     break;
                 case KeyEvent.VK_SPACE:
