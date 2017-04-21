@@ -1,11 +1,11 @@
 package homemadeSnake;
-
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Observable;
 import java.util.Random;
 
-import javax.swing.JOptionPane;
+
 
 import specialMove.Pause;
 import specialMove.SpeedDown;
@@ -53,7 +53,7 @@ public class Motion extends Observable implements Runnable {
 	    	boolmatrix=new boolean[xMax][];
 	    	for(int i = 0; i<xMax; ++i){
 	    		boolmatrix[i]=new boolean[yMax];
-	    		Arrays.fill(boolmatrix, false);
+	    		Arrays.fill(boolmatrix[i], false);
 	    	}
 	    	
 	    	int initialLength=xMax>20? 10:xMax/2;
@@ -173,15 +173,16 @@ public class Motion extends Observable implements Runnable {
     }
     	running =false;
 }
+}
 class Node {
 	int x;
 	int y;
-	public Node(int x, int y) {
+	 Node(int x, int y) {
 		// TODO Auto-generated constructor stub
 		this.x=x;
 		this.y=y;
 	}
 
-}
+
 }
 
