@@ -34,9 +34,9 @@ public class Motion extends Observable implements Runnable {
     public static final int LEFT = 5;
     public static final int RIGHT = 7;
     
-    SpeedUP speedUP;
-	SpeedDown speedDown;
-	Pause pause;
+    SpeedUP speedUP= new SpeedUP();
+	SpeedDown speedDown= new SpeedDown();
+	Pause pause= new Pause();
     
 	public Motion(int xMax, int yMax){
 		this.xMax=xMax;
