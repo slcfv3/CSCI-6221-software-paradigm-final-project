@@ -45,7 +45,7 @@ package homemadeSnake;
 	        JLabel labelHelp;
 	        labelHelp = new JLabel("W for accelerating, S for slowing down;", JLabel.CENTER);
 	        panelButtom.add(labelHelp, BorderLayout.NORTH);
-	        labelHelp = new JLabel("R for start;", JLabel.CENTER);
+	        labelHelp = new JLabel("R for restart;", JLabel.CENTER);
 	        panelButtom.add(labelHelp, BorderLayout.CENTER);
 	        labelHelp = new JLabel("P for pause", JLabel.CENTER);
 	        panelButtom.add(labelHelp, BorderLayout.SOUTH);
