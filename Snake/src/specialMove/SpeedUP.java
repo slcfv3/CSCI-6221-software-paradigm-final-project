@@ -5,11 +5,13 @@ public class SpeedUP extends Special {
 	
 	
 	@Override
-	public void specialMove(int interval, double changeRate, boolean pauseState) {
+	public int specialMove(int interval, double changeRate, boolean pauseState) {
 		// TODO Auto-generated method stub
 		
 		interval *= changeRate; 
-		
+		return interval;
 	}
+
+	
 
 }

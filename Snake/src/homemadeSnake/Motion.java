@@ -7,7 +7,7 @@ import java.util.Random;
 
 
 
-import specialMove.Pause;
+
 import specialMove.SpeedDown;
 import specialMove.SpeedUP;
 
@@ -22,8 +22,8 @@ public class Motion extends Observable implements Runnable {
 	
 	int score=0;
 	
-	int interval = 190;                     // time interval in ms
-    double changeRate = 0.75;              // the rate of changing speed
+	int interval = 240;                     // time interval in ms
+    double changeRate = 0.5;              // the rate of changing speed
     boolean pauseState = false;            //to illustrate if the snake is paused
     
     boolean running=false;
@@ -34,9 +34,9 @@ public class Motion extends Observable implements Runnable {
     public static final int LEFT = 5;
     public static final int RIGHT = 7;
     
-    SpeedUP speedUP= new SpeedUP();
-	SpeedDown speedDown= new SpeedDown();
-	Pause pause= new Pause();
+    
+	
+	
     
 	public Motion(int xMax, int yMax){
 		this.xMax=xMax;
@@ -46,7 +46,7 @@ public class Motion extends Observable implements Runnable {
 	
 	public void reset(){
 	    	direct=Motion.DOWN;
-	    	interval= 190;
+	    	interval= 240;
 	    	pauseState=false;
 	    	score=0;
 	    	
@@ -56,7 +56,7 @@ public class Motion extends Observable implements Runnable {
 	    		Arrays.fill(boolmatrix[i], false);
 	    	}
 	    	
-	    	int initialLength=xMax>20? 10:xMax/2;
+	    	int initialLength=3;
 	    	snake.clear();
 	    	
 	    	for(int j=0; j<initialLength; ++j){
@@ -134,15 +134,17 @@ public class Motion extends Observable implements Runnable {
 	}
 
     public void quickUp(){
-    	speedUP.specialMove(interval, changeRate, pauseState);
+    	SpeedUP speedUP= new SpeedUP();
+    	interval=speedUP.specialMove(interval, changeRate, pauseState);
     }
     
     public void quickDown(){
-    	speedDown.specialMove(interval, changeRate, pauseState);
+    	SpeedDown speedDown= new SpeedDown();
+    	interval=speedDown.specialMove(interval, changeRate, pauseState);
     }
     
     public void freeze(){
-    	pause.specialMove(interval, changeRate, pauseState);
+    	pauseState = !pauseState;
     }
     
    

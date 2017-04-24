@@ -43,7 +43,7 @@ package homemadeSnake;
 	        JPanel panelButtom = new JPanel();
 	        panelButtom.setLayout(new BorderLayout());
 	        JLabel labelHelp;
-	        labelHelp = new JLabel("W,S for speed;", JLabel.CENTER);
+	        labelHelp = new JLabel("W for accelerating, S for slowing down;", JLabel.CENTER);
 	        panelButtom.add(labelHelp, BorderLayout.NORTH);
 	        labelHelp = new JLabel("R for start;", JLabel.CENTER);
 	        panelButtom.add(labelHelp, BorderLayout.CENTER);

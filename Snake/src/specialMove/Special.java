@@ -3,6 +3,6 @@ package specialMove;
 
 public abstract class Special {
 	
-	public abstract void specialMove(int interval, double changeRate, boolean pauseState);
+	public abstract int specialMove(int interval, double changeRate, boolean pauseState);
 
 }
